@@ -1,0 +1,18 @@
+# files we don't want
+.DS_Store
+.sass-cache/
+
+# bower and npm libs
+node_modules/
+bower_components/
+
+# cordova specific
+platforms/
+plugins/
+
+# documentation
+docs/
+
+# generated files
+www/css
+www/js/libs.js

@@ -1,0 +1,59 @@
+<ion-view title="{{data.selectedMovie.title}}" id="view-movies-detail">
+  <ion-nav-title>{{data.selectedMovie.title}}</ion-nav-title>
+  <ion-content>
+    <img src="http://image.tmdb.org/t/p/w500/{{data.selectedMovie.backdrop_path}}"/>
+    <ul class="list">
+      <li class="item">
+        <strong>Release date:</strong>
+        {{data.selectedMovie.release_date | date: 'yyyy'}}
+      </li>
+      <li class="item">
+        <strong>Rating:</strong>
+        {{data.selectedMovie.vote_average}} ({{data.selectedMovie.vote_count}}x)
+      </li>
+      <li class="item item-body">
+        <p>{{data.selectedMovie.overview}}</p>
+      </li>
+      <li  class="item">
+        <button class="button button-block"
+          ng-click="toggleWatched(data.selectedMovie.id)"
+          ng-class="{
+            'button-positive': !isMovieWatched(),
+            'button-assertive': isMovieWatched()
+          }">
+          <span ng-if="!isMovieWatched()">Mark as watched</span>
+          <span ng-if="isMovieWatched()">Unmark as watched</span>
+        </button>
+      </li>
+      <li>
+        <div class="row bar-header">
+          <h1 style="font-size: 20px">Production Countries</h1>
+        </div>
+        <div id="{{data.countryLabelId}}"></div>
+        <div id="regions_div" style="height: 250px">
+          Geo Chart
+        </div>
+      </li>
+      <li>
+        <div class="row bar-header">
+          <h1 style="font-size: 20px">Genres</h1>
+        </div>
+        <div class="row">
+          <div class="col">
+            <canvas id="doughnut" class="chart chart-doughnut" chart-data="chartData.data" chart-labels="chartData.labels"
+            chart-legend="true" chart-series="series" chart-click="onClick"></canvas>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="row bar-header">
+          <h1 style="font-size: 20px">Cast</h1>
+        </div>
+        <div class="row" ng-repeat="cast in data.credits">
+          <div class="col padding-horizontal">{{ cast.name }}</div>
+          <div class="col">{{ cast.character }}</div>
+        </div>
+      </li>
+    </ul>
+  </ion-content>
+</ion-view>

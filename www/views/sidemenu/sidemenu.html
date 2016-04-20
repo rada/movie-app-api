@@ -1,0 +1,26 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-positive" align-title="center" >
+      <ion-nav-back-button></ion-nav-back-button>
+    </ion-nav-bar>
+
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left">
+    <ion-header-bar class="bar-assertive">
+      <h1 class="title">Movie Menu</h1>
+    </ion-header-bar>
+    <ion-content>
+      <ion-list>
+        <ion-item class="item item-divider">Movies</ion-item>
+          <!-- <a href="#/sidemenu/popularMovies" class="item" menu-close>Popular Movies</a> -->
+          <!-- <a href="#/sidemenu/genreMovies" class="item" menu-close>Movies By Genre</a> -->
+        <a menu-close class="item" ui-sref="movieMenu.popularMovies">Popular</a>
+        <a menu-close class="item" ui-sref="movieMenu.genreMovies">By Genre</a>
+        <ion-item class="item item-divider">User Detail</ion-item>
+        <a ui-sref="movieMenu.profile" class="item" menu-close>Profile</a>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

@@ -1,0 +1,13 @@
+{
+  "name": "H6 Michal Rada",
+  "app_id": "a9b0f2af",
+  "gulpStartupTasks": [
+    "sass",
+    "scripts",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
+}

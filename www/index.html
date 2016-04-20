@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html ng-app="App" ng-controller="MainCtrl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta http-equiv="Content-Security-Policy" content="img-src &apos;self&apos; data: http://image.tmdb.org; default-src *; style-src &apos;self&apos;  &apos;unsafe-inline&apos;
+    localhost https://www.gstatic.com/charts/; script-src &apos;self&apos; &apos;unsafe-inline&apos; &apos;unsafe-eval&apos; localhost:*
+    https://www.gstatic.com/charts/ http://www.gstatic.com/charts/ https://www.google.com/
+    https://maps.googleapis.com/">
+
+    <title></title>
+
+    <!--locales-->
+    <script src="locales/cs.js"></script>
+    <script src="locales/en.js"></script>
+
+    <!-- compiled css output -->
+    <link href="css/ionic.app.css" rel="stylesheet">
+    <link href="css/libs.css" rel="stylesheet">
+    <link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.css">
+
+    <script src="js/libs.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="app/app.js"></script>
+    <script src="app/config.js"></script>
+    <script src="js/pre-init.js"></script>
+    <script src="app/routes.js"></script>
+    <script src="directives/directives.js"></script>
+    <script src="filters/filters.js"></script>
+    <script src="lib/angular-resource/angular-resource.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script src="bower_components/Chart.js/Chart.min.js"></script>
+    <script src="bower_components/angular-chart.js/dist/angular-chart.js"></script>
+    <script src="bower_components/angular-chart.js/dist/angular-chart.min.js"></script>
+
+    <!-- models -->
+    <script src="model/global-service.js"></script>
+    <script src="model/movies-service.js"></script>
+    <script src="model/genre-service.js"></script>
+    <script src="model/country-service.js"></script>
+    <script src="model/profile-service.js"></script>
+
+
+    <!-- controllers -->
+    <script src="views/main/main.js"></script>
+    <script src="views/home/home.js"></script>
+    <script src="views/movies/movies-list.js"></script>
+    <script src="views/movies/movies-detail.js"></script>
+    <script src="views/genres/genre-list.js"></script>
+    <script src="views/profile/profile.js"></script>
+
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['geochart']});
+      // google.charts.setOnLoadCallback(drawRegionsMap);
+    </script>
+
+</head>
+<body animation="slide-left-right">
+<!-- <ion-nav-bar class="bar-positive" align-title="center">
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+</ion-nav-bar> -->
+
+
+<ion-nav-view animation="slide-left-right">
+</ion-nav-view>
+
+</body>
+</html>

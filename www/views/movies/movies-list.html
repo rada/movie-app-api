@@ -1,0 +1,32 @@
+<ion-view title="Popular Movies" id="view-movie-list">
+  <ion-nav-buttons side="left">
+    <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+  </ion-nav-buttons>
+
+    <ion-content >
+      <div class="row">
+        <div class="bar item-input-inset bar-search">
+            <label class="item-input-wrapper">
+                <i class="icon ion-ios-search"></i>
+                <input type="search" ng-model="searchString" placeholder="Search">
+            </label>
+        </div>
+        <!-- <a ui-sref="movies-genre()" class="col-center">Movie Genres</a> -->
+      </div>
+      <!-- <div class="row">
+        <a ng-click="getDataSourceMovies()">DataSource Movies</a>
+      </div> -->
+        <ion-list>
+            <!-- <ion-item class="item-avatar-left" ui-sref="movies-detail({'id': movie.id, 'ref': 'moviesList'})"
+            ng-repeat="movie in data.movies | filter: searchString" | orderBy: '-vote_average'> -->
+          <ion-item class="item-avatar-left" ui-sref="movieMenu.movies-detail({'id': movie.id, 'ref': 'moviesList'})"
+          ng-repeat="movie in data.movies | filter: searchString" | orderBy: '-vote_average'>
+              <img src="http://image.tmdb.org/t/p/w500/{{movie.backdrop_path}}" class="fit-thumbnail"/>
+              <h2>{{::movie.title}}</h2>
+              <p>{{movie.vote_average}} /10 </p>
+          </ion-item>
+        </ion-list>
+        <ion-infinite-scroll distance="2" on-infinite="getNextMoviePage()" ng-if="!moreData">
+        </ion-infinite-scroll>
+    </ion-content>
+</ion-view>

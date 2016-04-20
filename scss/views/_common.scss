@@ -1,0 +1,125 @@
+//
+// BASIC TAGS
+//
+
+body {
+  background: $background;
+}
+
+a {
+  color: $positive;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-size: $headingFontSize;
+  font-family: $fontFamily;
+}
+
+//
+// CUSTOM CLASSES
+//
+
+.fit-thumbnail{
+  object-fit: cover;
+}
+
+.userPhoto {
+  display: inline-block;
+  object-fit: cover;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 1;
+}
+.camIco{
+  position: absolute;
+  left:250px;
+  top: 120px;
+  z-index: 10;
+}
+.right-align{
+  margin-top: 7px;
+  margin-left: auto;
+  display: block;
+}
+.row-positive{
+  background-color: $positive;
+}
+#countryLabel {
+    /* border: solid 1px; */
+    position: relative;
+    top: 50px;
+    left: 45%;
+    z-index: 31;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: none;
+    border-radius: 8px;
+    box-shadow: 0px 0px 9px #800000;
+    background: #000000;
+    color:  white;
+    height: 30px;
+    line-height: 30px;
+}
+
+.home-container {
+     display: -webkit-flex;
+     -webkit-flex-direction: column;
+     height: 100%;
+}
+.home-container > .row {
+     -webkit-flex: 1;
+}
+
+.header {
+     -webkit-flex: 1.5 !important;
+     -webkit-align-items: center;
+     background-color: $positive;
+     color: white;
+}
+
+.icon-row {
+     -webkit-align-items: center;
+}
+
+.both {
+  clear: both
+}
+.border-top {
+  border-top: solid 2px $textColor;
+}
+
+.border-bottom {
+  border-bottom: solid 2px $textColor;
+}
+
+.on-the-top {
+  z-index: 100;
+  position: absolute;
+}
+
+.top-margin {
+  margin-top: 10px;
+}
+
+.bottom-margin {
+  margin-bottom: 10px;
+}
+
+.u {
+  text-decoration: underline;
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+.hidden{
+  display: none;
+}
